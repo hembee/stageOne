@@ -5,7 +5,7 @@ const PORT = 3000;
 
 app.use(express.json());
 
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
   const slack = req.query.slack_name;
   const track = req.query.track;
   const currentUTCDate = new Date().toUTCString();
