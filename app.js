@@ -8,7 +8,7 @@ app.use(express.json());
 app.get("/api", (req, res) => {
   const slack = req.query.slack_name;
   const track = req.query.track;
-  const currentUTCDate = new Date().toUTCString();
+  const currentUTCDate = new Date().toISOString();;
   const dayOfWeek = new Date().getUTCDay();
   const git_repo = "https://github.com/hembee/stageOne";
   const git_file = "https://github.com/hembee/stageOne/blob/main/app.js";
